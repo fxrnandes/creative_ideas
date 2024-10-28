@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "313199131506",
+    "project_id": "creative-ideas-ce5a3",
+    "storage_bucket": "creative-ideas-ce5a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313199131506:android:3873ab34ecec2ab274bbeb",
+        "android_client_info": {
+          "package_name": "com.example.creative_ideas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPV5fSFwHKnCDkV4MifhJiAIG6zXeLrQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
