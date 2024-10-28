@@ -78,7 +78,7 @@ class _IdeaFormScreenState extends State<IdeaFormScreen> {
                   backgroundColor: Color(0xFF5DADEC), // Cor primária
                 ),
                 child: Text(
-                  widget.idea == null ? 'Adicionar ideia' : 'Salvar ideia',
+                  widget.idea == null ? 'Adicionar ideia' : 'Atualizar ideia',
                   style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 ),
               ),
