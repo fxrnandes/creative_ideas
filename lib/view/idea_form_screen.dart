@@ -59,7 +59,7 @@ class _IdeaFormScreenState extends State<IdeaFormScreen> {
                   labelText: 'Título da ideia',
                   labelStyle: TextStyle(color: Color(0xFF333333)),
                 ),
-                validator: (value) => value!.isEmpty ? 'Enter a title' : null,
+                validator: (value) => value!.isEmpty ? 'Adicione um título' : null,
               ),
               SizedBox(height: 16),
               TextFormField(
@@ -69,7 +69,7 @@ class _IdeaFormScreenState extends State<IdeaFormScreen> {
                   labelStyle: TextStyle(color: Color(0xFF333333)),
                 ),
                 maxLines: 5,
-                validator: (value) => value!.isEmpty ? 'Enter a description' : null,
+                validator: (value) => value!.isEmpty ? 'Adicione uma descrição' : null,
               ),
               SizedBox(height: 20),
               ElevatedButton(
