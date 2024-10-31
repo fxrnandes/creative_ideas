@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../models/idea.dart';
+import '../viewmodel/ideas_viewmodel.dart';
 
 class IdeaFormScreen extends StatefulWidget {
-  final Map<String, String>? idea;
+  final Idea? idea;
 
   IdeaFormScreen({this.idea});
 
@@ -18,69 +21,58 @@ class _IdeaFormScreenState extends State<IdeaFormScreen> {
   void initState() {
     super.initState();
     if (widget.idea != null) {
-      _titleController.text = widget.idea!['title'] ?? '';
-      _descriptionController.text = widget.idea!['description'] ?? '';
+      _titleController.text = widget.idea!.title;
+      _descriptionController.text = widget.idea!.description;
     }
   }
 
   void _saveIdea() {
     if (_formKey.currentState!.validate()) {
-      final idea = {
-        'title': _titleController.text,
-        'description': _descriptionController.text,
-      };
-      Navigator.pop(context, idea);
+      final newIdea = Idea(
+        title: _titleController.text,
+        description: _descriptionController.text,
+      );
+
+      final ideasProvider = Provider.of<IdeasProvider>(context, listen: false);
+
+      if (widget.idea != null) {
+        newIdea.id = widget.idea!.id;  // Define o ID apenas se for uma atualização
+        ideasProvider.updateIdea(newIdea);
+      } else {
+        ideasProvider.addIdea(newIdea);
+      }
+      Navigator.pop(context);
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 202, 232, 255), // Cor de fundo
       appBar: AppBar(
-        backgroundColor: Color(0xFF5DADEC), // Cor primária
-        title: Text(
-          widget.idea == null ? 'Adicionar ideia' : 'Editar ideia',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: Text(widget.idea == null ? 'Adicionar ideia' : 'Editar ideia'),
+        backgroundColor: Color(0xFF5DADEC),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
           child: Column(
             children: [
               TextFormField(
                 controller: _titleController,
-                decoration: InputDecoration(
-                  labelText: 'Título da ideia',
-                  labelStyle: TextStyle(color: Color(0xFF333333)),
-                ),
-                validator: (value) => value!.isEmpty ? 'Adicione um título' : null,
+                decoration: InputDecoration(labelText: 'Título'),
+                validator: (value) => value!.isEmpty ? 'Insira um título válido' : null,
               ),
-              SizedBox(height: 16),
               TextFormField(
                 controller: _descriptionController,
-                decoration: InputDecoration(
-                  labelText: 'Descrição da ideia',
-                  labelStyle: TextStyle(color: Color(0xFF333333)),
-                ),
+                decoration: InputDecoration(labelText: 'Descrição'),
                 maxLines: 5,
-                validator: (value) => value!.isEmpty ? 'Adicione uma descrição' : null,
+                validator: (value) => value!.isEmpty ? 'Insira uma descrição válida' : null,
               ),
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _saveIdea,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF5DADEC), // Cor primária
-                ),
-                child: Text(
-                  widget.idea == null ? 'Adicionar ideia' : 'Atualizar ideia',
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                ),
+                child: Text(widget.idea == null ? 'Adicionar ideia' : 'Atualizar ideia'),
               ),
             ],
           ),
