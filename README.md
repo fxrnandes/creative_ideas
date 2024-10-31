@@ -17,7 +17,7 @@ Objetivo: O usuário pode visualizar, registrar, editar, excluir e atualizar sua
 
 | Atualização de ideias | Adicionar ideias |
 |--------------------------|----------------------------|
-| ![Atualização de ideias](screenshots/atualização-de-ideia-1.png) | ![Adicionar ideias](screenshots/adicionar-ideias-1.png) |
+| ![Atualização de ideias](screenshots/atualização-da-ideia-1.png) | ![Adicionar ideias](screenshots/adicionar-ideias-1.png) |
 
 | Exclusão de ideias |
 |--------------------------|
