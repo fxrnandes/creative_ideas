@@ -13,15 +13,15 @@ Objetivo: O usuário pode visualizar, registrar, editar, excluir e atualizar sua
 
 | Listagem de ideias vazia | Listagem de ideias |
 |--------------|-----------------------|
-| ![Listagem de ideias vazia](screenshot/lista-de-ideias-1.png) | ![Listagem de ideias](screenshot/lista-de-ideias-2.png) |
+| ![Listagem de ideias vazia](screenshots/lista-de-ideias-1.png) | ![Listagem de ideias](screenshots/lista-de-ideias-2.png) |
 
 | Atualização de ideias | Adicionar ideias |
 |--------------------------|----------------------------|
-| ![Atualização de ideias](screenshot/atualização-de-ideias-1.png) | ![Adicionar ideias](screenshot/adicionar-ideias-1.png) |
+| ![Atualização de ideias](screenshots/atualização-de-ideias-1.png) | ![Adicionar ideias](screenshots/adicionar-ideias-1.png) |
 
 | Exclusão de ideias |
 |--------------------------|
-| ![Exclusão de ideias](screenshot/exclusão-de-ideias-1.png) |
+| ![Exclusão de ideias](screenshots/exclusão-de-ideias-1.png) |
 
 ## Como importar o projeto
 
