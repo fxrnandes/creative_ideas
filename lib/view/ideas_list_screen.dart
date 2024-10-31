@@ -22,7 +22,7 @@ class _IdeasListScreenState extends State<IdeasListScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Creative Ideas'),
+        title: Text('Creative ideias', style: TextStyle(color: Colors.white)),
         backgroundColor: Color(0xFF5DADEC),
       ),
       body: ideasProvider.ideas.isNotEmpty
