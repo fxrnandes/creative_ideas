@@ -9,24 +9,19 @@ App de Gerenciamento de ideias criativas
 Objetivo: O usuário pode visualizar, registrar, editar, excluir e atualizar suas ideias.
 
 
-## Paleta de cores
-A paleta do projeto é monocromática seguindo tons de Azul indo até o branco:
-1. 4180AB
-2. 8AB3CF
-3. BDD1DE
-4. E4EBF0
-5. FFFFFF
-
 ## Telas do projeto
 
-| Tela inicial | Tela de input do nome |
+| Listagem de ideias vazia | Listagem de ideias |
 |--------------|-----------------------|
-| ![Tela inicial](screenshot/) | ![Tela de cadastro](screenshot/) |
+| ![Listagem de ideias vazia](screenshots/lista-de-ideias-1.png) | ![Listagem de ideias](screenshots/lista-de-ideias-2.png) |
 
-| Tela de input do salário | Tela de resumo financeiro |
+| Atualização de ideias | Adicionar ideias |
 |--------------------------|----------------------------|
-| ![Tela de resumo](screenshot/) | ![Tela de resumo](screenshot/) |
+| ![Atualização de ideias](screenshots/atualização-de-ideias-1.png) | ![Adicionar ideias](screenshots/adicionar-ideias-1.png) |
 
+| Exclusão de ideias |
+|--------------------------|
+| ![Exclusão de ideias](screenshots/exclusão-de-ideias-1.png) |
 
 ## Como importar o projeto
 
